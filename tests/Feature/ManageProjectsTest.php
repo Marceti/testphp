@@ -32,11 +32,11 @@ class ManageProjectsTest extends TestCase
         $response->assertSee($project->name);
 
     }
-    /** @test */
-    public function failedTest()
-    {
-
-        //bull shit
-        $this->assert(false);
-    }
+//    /** @test */
+//    public function failedTest()
+//    {
+//
+//        //bull shit
+//        $this->assert(false);
+//    }
 }
