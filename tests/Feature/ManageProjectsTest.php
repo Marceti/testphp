@@ -33,11 +33,11 @@ class ManageProjectsTest extends TestCase
 
         //should work
     }
-//    /** @test */
-//    public function failedTest()
-//    {
-//
-//        //bull shit
-//        $this->assert(false);
-//    }
+    /** @test */
+    public function failedTest()
+    {
+
+        //bull shit
+        $this->assert(false);
+    }
 }
