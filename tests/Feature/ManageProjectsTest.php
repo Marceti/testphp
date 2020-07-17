@@ -35,7 +35,8 @@ class ManageProjectsTest extends TestCase
     /** @test */
     public function failedTest()
     {
-        //some comment
+
+        //bull shit
         $this->assert(false);
     }
 }
