@@ -31,6 +31,7 @@ class ManageProjectsTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee($project->name);
 
+        //should work
     }
 //    /** @test */
 //    public function failedTest()
