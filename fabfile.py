@@ -11,7 +11,7 @@ env.hosts = ['testphp']
 
 code_dir='/var/www/deploy-stage'
 app_dir='/var/www/application'
-repo='git@github.com:Marceti/testphp.git'
+repo='Marceti/testphp.git'
 timestamp="release_%s" % int(time.time() * 1000)
 release_dir=code_dir+'/releases'
 current_release_dir=code_dir+'/releases/'+timestamp
@@ -33,7 +33,7 @@ def fetch_repo():
         with settings(warn_only=True):
             run("mkdir releases")
     with cd(release_dir):
-        run("git clone -b master %s %s" % (repo, timestamp))
+        run("git clone -b master github.com:%s %s" % (repo, timestamp))
 
 def run_composer():
     print('*** Running composer install ***' )
