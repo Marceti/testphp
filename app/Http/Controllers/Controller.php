@@ -13,6 +13,6 @@ class Controller extends BaseController
 
     public function welcome()
     {
-        return view('welcome');
+        return view('welcome2');
     }
 }
