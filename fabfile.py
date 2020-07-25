@@ -49,7 +49,7 @@ def prepare_logs_folder():
 def add_env_symlinks():
     print('*** Preparing env file ***********************************************************************' )
     with cd(code_dir):
-        run("ln -nfs %s %s " % (code_dir+'/.env', current_release_dir+'/.env'))
+        run("ln -s %s %s " % (code_dir+'/.env', current_release_dir+'/.env'))
 
 
 def run_composer():
@@ -69,7 +69,8 @@ def update_permissions():
 def update_symlinks():
     print('*** create simlinks  ***********************************************************************' )
     with cd(code_dir):
-        run("ln -nfs %s %s" % (current_release_dir, app_dir))
+        run("rm -rf %s" % (app_dir))
+        run("ln -s %s %s" % (current_release_dir, app_dir))
         run("chgrp -h www-data %s" % app_dir)
-        run("sudo service php7.3-fpm reload")
+        #run("service php7.3-fpm reload")
 
