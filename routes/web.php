@@ -13,4 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'Controller2@welcome');
+Route::get('/', 'Controller@welcome');
+//Route::get('/', function(){
+//    dump("xx");
+//    return "xxx";
+//});
