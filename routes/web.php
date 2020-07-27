@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','Controller@welcome');
+Route::get('/','Controller2@welcome');
