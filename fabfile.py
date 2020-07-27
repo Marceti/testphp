@@ -58,6 +58,7 @@ def run_composer():
         run("composer install --prefer-dist --no-scripts")
         run("php artisan package:discover --ansi --env=production")
         run("php artisan key:generate --ansi --env=production")
+        run("php artisan optimize:clear --env=production")
 
 def update_permissions():
     print('*** Update permissions ***********************************************************************' )
